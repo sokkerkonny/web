@@ -96,7 +96,7 @@ body {
     font-size: 21px;
     font-weight: 400;
     text-decoration: none;
-    color: #fff;
+    color: #455a64;
 }
 
 .wrapper header.header ul.nav.navbar-nav li a {
@@ -123,7 +123,7 @@ body {
 }
 
 .wrapper header.header .header-text h1 {
-    color: #fff;
+    color: #455a64;
     font-family: "Raleway", sans-serif;
     font-size: 65px;
     font-weight: 600;
@@ -497,7 +497,8 @@ div.wrapper section.portfolia div.penination p {
     width: -moz-fit-content;
     border-radius: 30px/30px;
 }
-div.wrapper section.portfolia div.penination a{
+
+div.wrapper section.portfolia div.penination a {
     text-decoration: none;
     color: #fff;
 }

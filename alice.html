@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Digital Agency Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Croissant+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">¨
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+
+    <script>
+        $('#location-button').click(function() {
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    console.log(position);
+                    $.get("http://maps.googleapis.com/maps/api/geocode/json?latlng=AIzaSyDkmeQaDbn0bNs5iYubNbiYiMBSn95Et8Q" + position.coords.latitude + "," + position.coords.longitude + "&sensor=false", function(data) {
+                        console.log(data);
+                    })
+                    var img = new Image();
+                    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=800x400&sensor=false";
+                    $('#output').html(img);
+                });
+
+            }
+        });
+    </script>
+    <div class="wrapper">
+        <header class="header">
+            <div class="blue">
+                <img src="img/header-shepe-blue.png" alt="">
+            </div>
+            <div class="white">
+                <img src="img/header-shepe-white.png" alt="">
+            </div>
+            <div class="container">
+                <img class="shepe1" src="img/shepe1.png" alt="">
+                <img class="shepe2" src="img/shepe2.png" alt="">
+                <img class="shepe3" src="img/shepe2.png" alt="">
+                <img class="shepe4" src="img/shepe2.png" alt="">
+                <img class="shepe5" src="img/shepe1.png" alt="">
+                <img class="shepe6" src="img/shepe2.png" alt="">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="logo">
+                            <h2><a href="#">Kulo</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <div class="menu">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">About</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="header-text">
+                            <h1>Alice Karriärsida</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <section class="works">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="work-images">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/r_gBTgeymgs?controls=0" frameborder="0" allowfullscreen></iframe>
+                            <div class="overlay-text">
+                                <i class="material-icons">play_circle_filled</i>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="portfolia">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="port-text">
+                            <h2>Verktyg och resurser</h2>
+                            <p>Skolor, arbetsförmedlingar, cv </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-part">
+                            <img src="img/Find-A-Job-Rev-3.png" alt="">
+                            <div class="overlay-slide">
+                                <h2>Länkar till arbetsförmedlingar</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-part">
+                            <img src="img/utb.png" alt="">
+                            <div class="overlay-slide">
+                                <h2>Utbildningar och kurser</h2>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-part">
+                            <img src="img/tools.jpg " alt=" ">
+                            <div class="overlay-slide ">
+                                <h2>Verktyg och hjälpmedel</h2>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 ">
+                        <div class="portfolio-part ">
+                            <a href="documents.html" </a>
+                                <img src="img/Document-Library.png" alt=" " height="350">
+                                <div class="overlay-slide ">
+                                    <h2>dokumentbank</h2>
+                                    <p>Dokument om kunskaper som kan vara bra att kunna</p>
+                                </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+    </div>
+    </div>
+    </section>
+    <section class="our-team ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-10 ">
+                    <div class="team-text ">
+                        <h2>Meet Our Team!</h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="fa-align-left ">
+                <div class="col-lg-15 ">
+
+                    <div class="item ">
+                        <img src="img/alice.1jpg.jpg" alt=" " " width="100 " height="200 ">
+                            <h3>Alice Pettersson</h3>
+                            <h4>Job title looking for a job</h4>
+                                
+                            </div>>                            
+                               
+                               
+                            
+                        </div>
+                        <div class="item ">
+                            <img src="img/up1.jpg " alt=" " width="100 " height= 200">
+                        <div class="item-overlay "></div>
+                        <div class="item-text ">
+                            <h3>Ulf G Pettersson</h3>
+                            <h4>UX/UI Designer and CEO</h4>
+
+                            <footer class="footer ">
+                                <div class="container ">
+                                    <div class="row ">
+                                        <div class="col-md-4 col-sm-12 ">
+                                            <div class="footer-icon ">
+
+                                                </p>
+                                                <h5>&copy; All Right Reserved</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 ">
+                                            <div class="footer-text ">
+
+                            </footer>
+                            </div>
+                            <script src="js/jquery-3.1.1.min.js "></script>
+                            <script src="js/bootstrap.min.js "></script>
+                            <script src="js/owl.carousel.min.js "></script>
+                            <script src="js/active.js "></script>
+</body>
+
+</html>
